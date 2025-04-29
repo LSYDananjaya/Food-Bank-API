@@ -29,7 +29,7 @@ services:
       - PORT=5009
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - STRIPE_SECRET_KEY=
       - STRIPE_WEBHOOK_SECRET=
@@ -56,7 +56,7 @@ services:
       - PORT=5012
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - ORDER_SERVICE_URL=http://order-service:5006
       - USER_SERVICE_URL=http://user-service:5002
@@ -89,7 +89,7 @@ services:
       - PORT=5000
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
     volumes:
       - ./shared:/usr/src/app/shared
@@ -120,7 +120,7 @@ services:
       - PORT=5002
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - ORDER_SERVICE_URL=http://order-service:5006
     volumes:
@@ -148,7 +148,7 @@ services:
       - PORT=5003
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - USER_SERVICE_URL=http://user-service:5002
       - ORDER_SERVICE_URL=http://order-service:5006
@@ -181,7 +181,7 @@ services:
       - PORT=5004
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - SEARCH_SERVICE_URL=http://search-service:5010
     volumes:
@@ -210,7 +210,7 @@ services:
       - PORT=5005
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - MENU_SERVICE_URL=http://menu-service:5004
     volumes:
@@ -240,7 +240,7 @@ services:
       - PORT=5006
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - USER_SERVICE_URL=http://user-service:5002
       - RESTAURANT_SERVICE_URL=http://restaurant-service:5003
@@ -278,7 +278,7 @@ services:
       - PORT=5007
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - RESTAURANT_SERVICE_URL=http://restaurant-service:5003
     volumes:
@@ -308,7 +308,7 @@ services:
       - PORT=5008
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - USER_SERVICE_URL=http://user-service:5002
     volumes:
@@ -338,7 +338,7 @@ services:
       - PORT=5010
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - RESTAURANT_SERVICE_URL=http://restaurant-service:5003
       - MENU_SERVICE_URL=http://menu-service:5004
@@ -372,7 +372,7 @@ services:
       - PORT=5011
       - MONGO_URI=
       - JWT_SECRET=270411
-      - INTERNAL_API_KEY=0c1f4fa5cc7f7cd07686a6825e623aaba380cc09d08f69b0f13367a098d1a280
+      - INTERNAL_API_KEY=
       - NODE_ENV=development
       - USER_SERVICE_URL=http://user-service:5002
       - ORDER_SERVICE_URL=http://order-service:5006
