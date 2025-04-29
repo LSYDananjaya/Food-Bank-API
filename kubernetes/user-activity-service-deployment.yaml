@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-activity-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-activity-service
+  template:
+    metadata:
+      labels:
+        app: user-activity-service
+    spec:
+      containers:
+      - name: user-activity-service
+        image: user-activity-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5011
+        env:
+        - name: PORT
+          value: "5011"
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: mongo-uri
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: jwt-secret
+        - name: NODE_ENV
+          value: "production"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5011
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5011
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-activity-service
+spec:
+  selector:
+    app: user-activity-service
+  ports:
+  - port: 5011
+    targetPort: 5011
